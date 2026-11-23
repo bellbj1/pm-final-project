@@ -1,17 +1,44 @@
-# Hypothesis & Success Metrics
+# Hypothesis & Success Metrics (Module 3)
 
-> **Module 3 · ★ Deliverable 3.** Repo file `03-analytics/hypothesis-and-metrics.md` — part of your submission.
-> Do the lab in the **Module 3 · Exercise Guide** (linked from the Module 3 deck), then click **⬇ Download .md** — it saves as this exact file. Commit it here.
-> It feeds the **Problem, Value & Hypothesis** slide of your Module 6 final deck.
+## Pre-work · Hypothesis check
+- **Role , who you are solving for (from M2):** Frontline delivery driver who uses the app repeatedly to execute routes and record completed deliveries.
+- **Goal , what this user is ultimately trying to achieve:** Complete each stop and record its outcome quickly, without unnecessary interaction at the doorstep.
+- **Friction / moment of misery , the specific pain blocking their goal:** Diego stands at a doorstep in the rain, holding a package in one hand, and must navigate three screens to mark the stop delivered; he has started texting his dispatcher instead.
+- **Current workaround , the external tool or manual process they rely on (M2):** Texting the Dispatcher Instead of Recording Delivery The confirmed external tool is text messaging; the manual process is reporting completion directly to the dispatcher.
+- **Problem Hook , your one-sentence framing of the business crisis (M1):** We must solve customer churn, dissatisfaction, and loss of market position by addressing the complexity that slows frontline users during time-sensitive fleet operations.
+- **Value Proposition , the outcome your initiative promised to deliver (M1):** For frontline fleet coordinators, we will make RouteLogic Velocity the fastest, simplest way to manage real-time operations because growing complexity is driving users toward leaner competitors and putting key enterprise accounts at risk.
 
-## Finalized product hypothesis
+## Read your data snapshots
+- **Does the funnel data confirm your M2 friction point, or does it tell a different story? Note where the numbers align with the qualitative pain you found and where they diverge.:** _(not filled in)_
+- **Do the retention patterns align with the workaround your M2 persona used to find content? Note what the Mo. 0→1 drop suggests about the onboarding experience your persona described as frustrating.:** _(not filled in)_
+- **Does the LTV gap and the content mix (61% trending for Wanderers) confirm the moment of misery your persona described? Note which segment your persona is in and whether the data confirms their pain.:** _(not filled in)_
+- **Does the low adoption confirm your persona is burdened by tools they don’t use? Note whether the low scheduling adoption (42%) for coordinators matches your M2 moment of misery.:** No, low adoption suggests a possible mismatch between features and users’ needs, but it does not confirm that Diego is burdened by tools he doesn’t use. Drivers primarily use the Live Dispatch Board (88%), Route Optimizer (72%), and Compliance Checklist (64%), while scheduling (15%), AI Predictive ETAs (11%), and financial reporting (3%) see much lower usage. That pattern may reflect role-specific needs rather than tool overload. The snapshot does not show whether unused features clutter Diego’s interface or impede his work.
 
-> Based on [qual + quant evidence], I believe that [solving X] for [persona] will result in [outcome], as measured by a [X%] change in [success metric]. I will protect [guardrail metric] and make a go/no-go decision after [decision window].
+The 42% scheduling adoption among coordinators does not directly match the M2 moment of misery. It concerns a different role and task: coordinator scheduling versus a driver marking a delivery complete. Diego’s three-screen workflow and decision to text his dispatcher instead point to friction within a necessary task—not simply an excess of unused tools. To validate M2, examine the delivery-completion workflow: completion time, screen transitions, abandonment, and how often drivers substitute texts for in-app updates. The adoption snapshot alone cannot establish that connection.
+- **Does the workflow data match the manual process or hack you documented in M2? Note whether the specific drop-offs or time gaps explain why your persona avoids the digital tool.:** The workflow data is consistent with the motivation behind the M2 workaround, “Texting the Dispatcher Instead of Recording Delivery,” but it does not directly validate that specific behavior. M2 identifies text messaging as the external tool and reporting completion directly to the dispatcher as the manual process. The data measures coordinator dispatch activities, not delivery recording or text-message use.
 
-## Success metrics
+The strongest supporting evidence is the drop in workflow completion from 71% at route assignment to 48% at compliance checks. Compliance checks take 14.6 minutes versus a 3-minute benchmark, an 11.6-minute gap. Completion then falls to 31% at shift handoff and 18% at daily reporting; those tasks take 6.8 and 6.7 minutes longer than their benchmarks, respectively.
 
-| Metric | Type | Target | Why it matters |
-|---|---|---|---|
-| _North-star_ | | _____ | _____ |
-| _Leading indicator_ | | _____ | _____ |
-| _Guardrail_ | | _____ | _____ |
+These bottlenecks offer a plausible explanation for why the persona bypasses the digital tool: recording and communicating information within the workflow appears burdensome, making direct reporting to the dispatcher an attractive alternative. However, the data does not establish that texting is faster or that users who drop off actually switch to it. The workflow supports the friction hypothesis, not proof of the specific workaround.
+- **Look at the CSAT heatmap. Which specific cell most directly maps to your persona’s friction? Note how the NPS trend justifies the urgency of your M1 Problem Hook.:** Diego’s friction maps most directly to Drivers × Reporting, rated 1.1 out of 5—the lowest score in the heatmap. He is trying to report a completed delivery, but navigating three screens while holding a package in the rain makes the workflow impractical. His decision to text his dispatcher instead demonstrates that complexity is driving frontline users to abandon the intended workflow.
+
+The coordinator NPS trend reinforces the urgency: it has fallen from +18 to −12 over two years—a 30-point collapse. Alongside daily time lost to manual workarounds rising from approximately 9 to 31 minutes, and complexity being cited as a churn reason by 4 of 5 accounts versus 1 of 8 previously, this supports the M1 Problem Hook: simplifying time-sensitive frontline workflows is a customer-retention priority, not merely a usability improvement.
+
+The evidence directly supports dissatisfaction and complexity-related churn; loss of market position remains a business risk rather than a measured outcome in this snapshot.
+
+## Step 3 · Craft your hypothesis
+- **Qualitative evidence (from M2) , quote the specific friction / moment of misery for your persona:** Diego stands at a doorstep in the rain, holding a package in one hand, and must navigate three screens to mark the stop delivered; he has started texting his dispatcher instead.
+- **Quantitative evidence (from M3) , name the metric or data point that confirms the pain; cite the number:** Log Compliance Checks
+- **Persona , role, goal, and the friction you confirmed in the reconciliation steps:** Frontline delivery drive.
+
+Complete each stop and record its outcome quickly, without unnecessary interaction at the doorstep.
+
+Diego stands at a doorstep in the rain, holding a package in one hand, and must navigate three screens to mark the stop delivered; he has started texting his dispatcher instead.
+- **Problem you are solving , one sentence describing the specific friction this initiative removes:** We must solve customer churn, dissatisfaction, and loss of market position by addressing the complexity that slows frontline users during time-sensitive fleet operations.
+- **Strategic outcome , what behaviour change do you expect, and how does it map to retention / revenue / churn?:** For frontline fleet coordinators, we will make RouteLogic Velocity the fastest, simplest way to manage real-time operations because growing complexity is driving users toward leaner competitors and putting key enterprise accounts at risk.
+- **Primary success metric (initiative signal) , the leading indicator that tells you the gap is closing:** Log Compliance Checks
+- **Guardrail metric (product signal) , the metric that must NOT drop; it protects your existing base:** Managers CSAT
+- **Decision window , how much time or data before you scale, pivot, or kill? minimum threshold to proceed?:** Run a four-week pilot with frontline coordinators. Proceed to a phased rollout if average time to log compliance checks falls from 14.6 minutes to 10 minutes or less, while Manager Reporting CSAT remains at or above 4.5/5 and compliance-check workflow completion stays at or above 48%.
+
+Pivot and retest if completion time improves but does not meet the target. Stop or roll back if either guardrail deteriorates. If usage or survey responses are insufficient to assess the results reliably, extend the pilot rather than making a scale decision.
+- **Draft your full hypothesis sentence , one to three sentences; quote the metric, name the persona, name the outcome:** Based on Diego’s experience navigating three screens to record a delivery and texting his dispatcher instead, alongside coordinator compliance checks taking an average of 14.6 minutes, I believe that simplifying compliance-check logging for frontline coordinators will reduce workflow friction and reliance on manual workarounds, supporting customer retention, as measured by an approximately 32% reduction in average compliance-check completion time—from 14.6 minutes to 10 minutes or less. I will protect Manager Reporting CSAT at or above 4.5/5 and compliance-check workflow completion at or above 48%, and will make a go/no-go decision after a four-week pilot, proceeding only if the improvement target and both guardrails are met and sufficient usage and survey data are available.
